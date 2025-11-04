@@ -3,3 +3,39 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.heading {
+  padding: 0 0 20px 0;
+}
+
+.myBooks {
+  background-color: aqua;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bookCard {
+  background-color: yellow;
+  min-width: 230px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.title {
+  color: red;
+}
