@@ -9,7 +9,28 @@
   <body>
     <main>
       <h1 class="heading">Welcome to Awn Library</h1>
-      <div class="myBooks"></div>
+
+      <!-- Button new book -->
+      <button id="new-book" class="btn add-book">Add Book</button>
+
+      <!-- Form new book -->
+      <dialog id="formDialog" class="formDialog">
+        <form action="" method="dialog">
+          <label for="title">Title </label>
+          <input type="text" id="title" placeholder="Enter book title" />
+          <label for="author">Author </label>
+          <input type="text" id="author" placeholder="Enter book author" />
+          <label for="pages">Pages </label>
+          <input type="number" id="pages" placeholder="Enter book pages" />
+
+          <!-- Confirm and close button -->
+          <button type="submit" id="submit" class="btn submit">Confirm</button>
+          <button type="reset" id="cancel" class="btn cancel">Cancel</button>
+        </form>
+      </dialog>
+
+      <!-- Books container -->
+      <div class="bookContainer"></div>
     </main>
 
     <script src="script.js"></script>
