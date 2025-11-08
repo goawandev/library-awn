@@ -1,23 +1,39 @@
 const library = [];
 
-// Oject constructor for Book
-function Book(title, author, pages, isRead = false) {
-  if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");
+// Class Book
+class Book {
+  constructor(title, author, pages, isRead = false) {
+    this.id = crypto.randomUUID();
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = isRead;
   }
 
-  this.id = crypto.randomUUID();
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.isRead = isRead;
+  toggleReadStatus() {
+    this.isRead = !this.isRead;
+  }
 }
 
-Book.prototype.toggleReadStatus = function () {
-  this.isRead = !this.isRead;
-};
+// Oject constructor for Book
+// function Book(title, author, pages, isRead = false) {
+//   if (!new.target) {
+//     throw Error("You must use the 'new' operator to call the constructor");
+//   }
+
+//   this.id = crypto.randomUUID();
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.isRead = isRead;
+// }
+
+// Book.prototype.toggleReadStatus = function () {
+//   this.isRead = !this.isRead;
+// };
 
 // Function for add book to library
+
 function addBookToLibrary(title, author, pages, isRead) {
   const newBook = new Book(title, author, pages, isRead);
 
